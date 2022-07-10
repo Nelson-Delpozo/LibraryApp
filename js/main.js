@@ -13,3 +13,6 @@ let book1 = new Book("For Whom the Bell Tolls", "Hemingway")
 let book2 = new Book("On the Road", "Kerouac")
 let book3 = new Book("Journey to the East", "Hesse")
 
+for(let i = 0; i < myLibrary.length; i++){
+
+}
