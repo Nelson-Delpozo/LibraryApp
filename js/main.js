@@ -15,7 +15,7 @@ let book3 = new Book("Journey to the East", "Hesse")
 
 function showBooks(array) {
   for (let i = 0; i < myLibrary.length; i++) {
-    console.log(array[i].title)
+    document.getElementById("books").innerHTML += "<tr><td>" + array[i].title + "</td><td>" + array[i].author + "</td></tr>"
   }
 }
 
