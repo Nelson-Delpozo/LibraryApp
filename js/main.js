@@ -9,6 +9,15 @@ function addBookToLibrary(book){
   myLibrary.push(book)
 }
 
+function addBookFromForm(){
+  let bookTitle = document.getElementById("title")
+  let bookAuthor = document.getElementById("author")
+  let newBook = new Book(bookTitle, bookAuthor)
+  myLibrary.push(newBook)
+  // location.reload()
+  showBooks(myLibrary)
+}
+
 let book1 = new Book("For Whom the Bell Tolls", "Hemingway")
 let book2 = new Book("On the Road", "Kerouac")
 let book3 = new Book("Journey to the East", "Hesse")
