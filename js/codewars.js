@@ -35,14 +35,22 @@ console.log(filter_list(['hj', 8, 'jiji', 9, 'hi there', 17, "b", "c", 190, "d",
 
 function duplicateEncode(word){
   let newString = "";
+  word = word.toLowerCase();
+
   for(let i = 0; i < word.length; i++){
-    let compare = word.slice(i + 1);
-    if(compare.includes(word[i])){
-      newString += ")"
-      // i -= 1
-    }else newString += "("
-    // i -= 1
-  }
+    if(i === word.length -1){
+      let compare = word.slice(0 , i)
+      if(compare.includes(word[i])){
+        newString += ")"
+      }else newString += "("
+    }else {
+      let compare = word.slice(i + 1);
+      if(compare.includes(word[i])){
+        newString += ")"
+      }else newString += "("
+    }
+    }
+
   return newString;
 }
 
