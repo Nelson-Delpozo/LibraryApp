@@ -20,6 +20,7 @@ function filter_list(l) {
   for(let i = 0; i < l.length; i++){
     if(typeof l[i] == 'string'){
       l.splice(i, 1);
+      //have to reduce i by one mid-loop or else two in a row strings will make it past the splice
       i -= 1;
     }
   } return (l);
@@ -32,4 +33,19 @@ function filter_list(l) {
 console.log(filter_list(['hj', 8, 'jiji', 9, 'hi there', 17, "b", "c", 190, "d", "f"]));
 
 
+function duplicateEncode(word){
+  let newString = "";
+  for(let i = 0; i < word.length; i++){
+    let compare = word.slice(i + 1);
+    if(compare.includes(word[i])){
+      newString += ")"
+      // i -= 1
+    }else newString += "("
+    // i -= 1
+  }
+  return newString;
+}
 
+console.log(duplicateEncode("car"))
+console.log(duplicateEncode("delete"))
+console.log(duplicateEncode("brother"))
