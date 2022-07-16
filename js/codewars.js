@@ -9,5 +9,12 @@ function makeUpperCase(str) {
 }
 console.log(makeUpperCase("hkhkhkjh"));
 
+function check(a, x) {
+  return (a.includes(x))
+}
+console.log(check("hello", "e"))
+console.log(check("hello", "f"))
+
+
 
 
