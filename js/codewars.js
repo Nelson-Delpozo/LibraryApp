@@ -69,10 +69,11 @@ function findOdd(A) {
   for (const [key, value] of Object.entries(counts)) {
     console.log(`${key}: ${value}`);
     if (`${value}` % 2 !== 0) {
-      return `${key}`
+      return parseInt(`${key}`)
       // console.log(`${key}`)
     }
 
   }
 }
 findOdd(sampleArray)
+
