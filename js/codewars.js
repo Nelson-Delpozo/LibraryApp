@@ -92,3 +92,17 @@ function findNextSquare(sq) {
 
 console.log(findNextSquare(121));
 
+function oddOrEven(array) {
+  //enter code here
+  let total = 0;
+  for (let i = 0; i < array.length; i++) {
+    total += array[i]
+    console.log(total)
+  }
+  if (total % 2 === 0) {
+    return "even"
+  } else {
+    return "odd"
+  }
+}
+console.log(oddOrEven([1, 2, 2]));
