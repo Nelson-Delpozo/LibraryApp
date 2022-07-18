@@ -79,11 +79,16 @@ findOdd(sampleArray)
 
 function findNextSquare(sq) {
   // Return the next square if sq is a perfect square, -1 otherwise
-  if(Math.sqrt(sq) !== (sq * sq)){
+  if(!Number.isInteger(Math.sqrt(sq))){
     return -1;
   }else{
-
-
+  for(let i = sq + 1; i < 100000; i++){
+    if(Number.isInteger(Math.sqrt(i))){
+      return i;
+    }
   }
-
+  }
 }
+
+console.log(findNextSquare(121));
+
