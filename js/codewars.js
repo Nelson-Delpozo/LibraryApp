@@ -62,12 +62,17 @@ const sampleArray = ['a', 'a', 'b', 'c'];
 function findOdd(A) {
   //happy coding!
   const counts = {};
-  sampleArray.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
-  console.log(counts)
-  counts.forEach(function (element) {
-    let x = element.count;
-    console.log(x);
+  sampleArray.forEach(function (x) {
+    counts[x] = (counts[x] || 0) + 1;
   });
+  // console.log(counts)
+  for (const [key, value] of Object.entries(counts)) {
+    console.log(`${key}: ${value}`);
+    if (`${value}` % 2 !== 0) {
+      return `${key}`
+      // console.log(`${key}`)
+    }
 
+  }
 }
-findOdd(sampleArray);
+findOdd(sampleArray)
