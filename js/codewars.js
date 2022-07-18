@@ -82,11 +82,11 @@ function findNextSquare(sq) {
   if(!Number.isInteger(Math.sqrt(sq))){
     return -1;
   }else{
-  for(let i = sq + 1; i < 100000; i++){
-    if(Number.isInteger(Math.sqrt(i))){
-      return i;
+    for(let i = sq + 1; i > 0; i++){
+      if(Number.isInteger(Math.sqrt(i))){
+        return i;
+      }
     }
-  }
   }
 }
 
