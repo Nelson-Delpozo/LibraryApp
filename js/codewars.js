@@ -57,3 +57,17 @@ function duplicateEncode(word){
 console.log(duplicateEncode("car"))
 console.log(duplicateEncode("delete"))
 console.log(duplicateEncode("brother"))
+
+const sampleArray = ['a', 'a', 'b', 'c'];
+function findOdd(A) {
+  //happy coding!
+  const counts = {};
+  sampleArray.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
+  console.log(counts)
+  counts.forEach(function (element) {
+    let x = element.count;
+    console.log(x);
+  });
+
+}
+findOdd(sampleArray);
