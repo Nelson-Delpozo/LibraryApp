@@ -77,3 +77,13 @@ function findOdd(A) {
 }
 findOdd(sampleArray)
 
+function findNextSquare(sq) {
+  // Return the next square if sq is a perfect square, -1 otherwise
+  if(Math.sqrt(sq) !== (sq * sq)){
+    return -1;
+  }else{
+
+
+  }
+
+}
