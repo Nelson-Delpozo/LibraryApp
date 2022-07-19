@@ -111,15 +111,21 @@ function validParentheses(parens) {
   // your code here ..
   let fronts = []
   let backs = []
-  for(let i = 0; i < parens.length; i++){
-    if (parens[i] === "("){
-      fronts.push(parens[i])
-    }else backs.push(parens[i])
+  if(parens.length == 0){
+    return true;
+  }else{
+
+    for(let i = 0; i < parens.length; i++){
+      if (parens[i] === "("){
+        fronts.push(parens[i])
+      }else backs.push(parens[i])
+    }
   }
-  if(fronts.length === backs.length){
+  if((fronts.length === backs.length) && (fronts[0] === "(")){
     return true;
   }else {
     return false;
   }
+
 }
 
