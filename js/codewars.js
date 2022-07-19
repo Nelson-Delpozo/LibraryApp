@@ -106,3 +106,20 @@ function oddOrEven(array) {
   }
 }
 console.log(oddOrEven([1, 2, 2]));
+
+function validParentheses(parens) {
+  // your code here ..
+  let fronts = []
+  let backs = []
+  for(let i = 0; i < parens.length; i++){
+    if (parens[i] === "("){
+      fronts.push(parens[i])
+    }else backs.push(parens[i])
+  }
+  if(fronts.length === backs.length){
+    return true;
+  }else {
+    return false;
+  }
+}
+
