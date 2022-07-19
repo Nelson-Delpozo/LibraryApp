@@ -7,24 +7,27 @@ function makeUpperCase(str) {
   // Code here
   return str.toUpperCase()
 }
+
 console.log(makeUpperCase("hkhkhkjh"));
 
 function check(a, x) {
   return (a.includes(x))
 }
+
 console.log(check("hello", "e"))
 console.log(check("hello", "f"))
 
 function filter_list(l) {
   // Return a new array with the strings filtered out
-  for(let i = 0; i < l.length; i++){
-    if(typeof l[i] == 'string'){
+  for (let i = 0; i < l.length; i++) {
+    if (typeof l[i] == 'string') {
       l.splice(i, 1);
       //have to reduce i by one mid-loop or else two in a row strings will make it past the splice
       i -= 1;
     }
-  } return (l);
-    }
+  }
+  return (l);
+}
 
 // function filter_list(l) {
 //   return l.filter(function(v) {return typeof v == 'number'})
@@ -33,23 +36,23 @@ function filter_list(l) {
 console.log(filter_list(['hj', 8, 'jiji', 9, 'hi there', 17, "b", "c", 190, "d", "f"]));
 
 
-function duplicateEncode(word){
+function duplicateEncode(word) {
   let newString = "";
   word = word.toLowerCase();
 
-  for(let i = 0; i < word.length; i++){
-    if(i === word.length -1){
-      let compare = word.slice(0 , i)
-      if(compare.includes(word[i])){
+  for (let i = 0; i < word.length; i++) {
+    if (i === word.length - 1) {
+      let compare = word.slice(0, i)
+      if (compare.includes(word[i])) {
         newString += ")"
-      }else newString += "("
-    }else {
+      } else newString += "("
+    } else {
       let compare = word.slice(i + 1);
-      if(compare.includes(word[i])){
+      if (compare.includes(word[i])) {
         newString += ")"
-      }else newString += "("
+      } else newString += "("
     }
-    }
+  }
 
   return newString;
 }
@@ -59,6 +62,7 @@ console.log(duplicateEncode("delete"))
 console.log(duplicateEncode("brother"))
 
 const sampleArray = ['a', 'a', 'b', 'c'];
+
 function findOdd(A) {
   //happy coding!
   const counts = {};
@@ -75,15 +79,16 @@ function findOdd(A) {
 
   }
 }
+
 findOdd(sampleArray)
 
 function findNextSquare(sq) {
   // Return the next square if sq is a perfect square, -1 otherwise
-  if(!Number.isInteger(Math.sqrt(sq))){
+  if (!Number.isInteger(Math.sqrt(sq))) {
     return -1;
-  }else{
-    for(let i = sq + 1; i > 0; i++){
-      if(Number.isInteger(Math.sqrt(i))){
+  } else {
+    for (let i = sq + 1; i > 0; i++) {
+      if (Number.isInteger(Math.sqrt(i))) {
         return i;
       }
     }
@@ -105,25 +110,26 @@ function oddOrEven(array) {
     return "odd"
   }
 }
+
 console.log(oddOrEven([1, 2, 2]));
 
 function validParentheses(parens) {
   // your code here ..
   let fronts = []
   let backs = []
-  if(parens.length == 0){
+  if (parens.length == 0) {
     return true;
-  }else{
+  } else {
 
-    for(let i = 0; i < parens.length; i++){
-      if (parens[i] === "("){
+    for (let i = 0; i < parens.length; i++) {
+      if (parens[i] === "(") {
         fronts.push(parens[i])
-      }else backs.push(parens[i])
+      } else backs.push(parens[i])
     }
   }
-  if((fronts.length === backs.length) && (fronts[0] === "(")){
+  if ((fronts.length === backs.length) && (fronts[0] === "(")) {
     return true;
-  }else {
+  } else {
     return false;
   }
 }
@@ -141,4 +147,22 @@ function twoSum(numbers, target) {
 }
 
 console.log(twoSum([1, 4, 7], 8))
+
+
+function isPangram(string) {
+  let count = 0;
+  let arrayFromString = string.toLowerCase().split("");
+  let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  console.log(arrayFromString);
+
+  for(let i = 0; i < alphabet.length; i++){
+    if (arrayFromString.includes(alphabet[i])){
+      count += 1;
+    }
+  }
+return count >= 26;
+}
+
+console.log(isPangram("the quick brown fox jump over the lazy dog"));
+
 
