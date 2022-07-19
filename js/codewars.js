@@ -165,4 +165,16 @@ return count >= 26;
 
 console.log(isPangram("the quick brown fox jump over the lazy dog"));
 
+function solution(A) {
+  // write your code in JavaScript (Node.js 8.9.4)
+  A.sort(function(a, b){return a-b});
+  A.filter(function(x){ return x > -1 });
 
+  for(let i = 1; i < 1000000; i++){
+    if(!A.includes(i)){
+      return(i)
+
+    }
+  }
+}
+solution([12, 11, 9, 3, 2, 1, 4, 7, 6, 8, 10])
