@@ -178,3 +178,8 @@ function solution(A) {
   }
 }
 solution([12, 11, 9, 3, 2, 1, 4, 7, 6, 8, 10])
+
+function findOutlier(integers){
+
+
+}
