@@ -195,3 +195,4 @@ if(odds.length > evens.length){
 
 console.log(findOutlier([2,6,8,10,3]));
 console.log(findOutlier([1,3,9,10,7]));
+console.log(findOutlier([1,2,9,11,7]));
