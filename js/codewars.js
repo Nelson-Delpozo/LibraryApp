@@ -198,6 +198,14 @@ console.log(findOutlier([1,3,9,10,7]));
 console.log(findOutlier([1,2,9,11,7]));
 
 function solution(str){
-
-
+  let result = [];
+for(let i = 0; i < str.length; i += 2){
+  result.push(str[i] + str[i + 1])
+  if((str[i + 1]) === undefined){
+    result.push("_")
+  }
 }
+  return result;
+}
+
+console.log(solution("abcde"));
