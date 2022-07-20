@@ -179,6 +179,9 @@ function solution(A) {
 }
 solution([12, 11, 9, 3, 2, 1, 4, 7, 6, 8, 10])
 
+
+
+
 function findOutlier(integers){
   let evens = []
   let odds = []
@@ -197,7 +200,9 @@ console.log(findOutlier([2,6,8,10,3]));
 console.log(findOutlier([1,3,9,10,7]));
 console.log(findOutlier([1,2,9,11,7]));
 
+
 function solution2(str){
+
   let result = [];
 for(let i = 0; i < str.length; i += 2){
   if((str[i + 1]) !== undefined) {
@@ -208,5 +213,10 @@ for(let i = 0; i < str.length; i += 2){
   return result;
 }
 
+
 console.log(solution2("abcde"));
 console.log(solution2("abcdefg"));
+
+console.log(solution("abcde"));
+
+
