@@ -178,3 +178,36 @@ function solution(A) {
   }
 }
 solution([12, 11, 9, 3, 2, 1, 4, 7, 6, 8, 10])
+
+
+function findOutlier(integers){
+  let evens = []
+  let odds = []
+integers.forEach(function(number){
+  if(number % 2 === 0){
+    evens.push(number)
+  }else odds.push(number)
+})
+if(odds.length > evens.length){
+  return evens[0];
+}else return odds[0];
+
+}
+
+console.log(findOutlier([2,6,8,10,3]));
+console.log(findOutlier([1,3,9,10,7]));
+console.log(findOutlier([1,2,9,11,7]));
+
+function solution(str){
+  let result = [];
+for(let i = 0; i < str.length; i += 2){
+  if((str[i + 1]) !== undefined) {
+    result.push(str[i] + str[i + 1])
+  }else
+  {result.push(str[i] + "_")}
+}
+  return result;
+}
+
+console.log(solution("abcde"));
+
