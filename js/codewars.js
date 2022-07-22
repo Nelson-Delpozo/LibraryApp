@@ -220,3 +220,26 @@ console.log(solution2("abcdefg"));
 console.log(solution("abcde"));
 
 
+function solution(numbers, left, right) {
+
+  let result = [];
+
+
+  for(let i = 0; i < numbers.length; i++){
+
+    let x = (numbers[i]) / (i + 1);
+
+    if(Number.isInteger(x) && x >= left && x <= right){
+      result.push(true)
+    }
+
+    else{
+      result.push(false)
+    }
+
+  }
+  return result;
+
+
+
+}
