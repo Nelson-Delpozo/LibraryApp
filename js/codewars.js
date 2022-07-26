@@ -272,7 +272,7 @@ function twistedSum(n) {
       stringOfDoubles = stringOfDoubles + (String(i));
       console.log(stringOfDoubles)
       let arrayOfDoubles = Array.from(stringOfDoubles);
-      console.log(arrayOfDoubles)
+      // console.log(arrayOfDoubles)
       for(let i = 0; i < arrayOfDoubles.length; i++){
         doubleDigitsTotal += arrayOfDoubles[i];
         console.log(doubleDigitsTotal)
