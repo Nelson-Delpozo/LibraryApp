@@ -264,17 +264,17 @@ function twistedSum(n) {
   let singleDigitsTotal = 0;
   let doubleDigitsTotal = 0;
   let stringOfDoubles = "";
-  for(let i = 1; i < n; i++){
+  for(let i = 1; i <= n; i++){
     if(i <= 9){
       singleDigitsTotal += i;
     }else{
       stringOfDoubles = stringOfDoubles + (String(i));
+      let arrayOfDoubles = Array.from(stringOfDoubles);
+      for(let i = 0; i < arrayOfDoubles.length; i++){
+        doubleDigitsTotal += arrayOfDoubles[i];
+      }
     }
-    let arrayOfDoubles = Array.from(stringOfDoubles);
-    for(let i = 0; i < arrayOfDoubles.length; i++){
-      doubleDigitsTotal += arrayOfDoubles[i];
-    }
-
   }
   return singleDigitsTotal + doubleDigitsTotal;
 }
+console.log(twistedSum(12));
