@@ -155,61 +155,65 @@ function isPangram(string) {
   let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
   console.log(arrayFromString);
 
-  for(let i = 0; i < alphabet.length; i++){
-    if (arrayFromString.includes(alphabet[i])){
+  for (let i = 0; i < alphabet.length; i++) {
+    if (arrayFromString.includes(alphabet[i])) {
       count += 1;
     }
   }
-return count >= 26;
+  return count >= 26;
 }
 
 console.log(isPangram("the quick brown fox jump over the lazy dog"));
 
 function solution(A) {
   // write your code in JavaScript (Node.js 8.9.4)
-  A.sort(function(a, b){return a-b});
-  A.filter(function(x){ return x > -1 });
+  A.sort(function (a, b) {
+    return a - b
+  });
+  A.filter(function (x) {
+    return x > -1
+  });
 
-  for(let i = 1; i < 1000000; i++){
-    if(!A.includes(i)){
-      return(i)
+  for (let i = 1; i < 1000000; i++) {
+    if (!A.includes(i)) {
+      return (i)
 
     }
   }
 }
+
 solution([12, 11, 9, 3, 2, 1, 4, 7, 6, 8, 10])
 
 
-
-
-function findOutlier(integers){
+function findOutlier(integers) {
   let evens = []
   let odds = []
-integers.forEach(function(number){
-  if(number % 2 === 0){
-    evens.push(number)
-  }else odds.push(number)
-})
-if(odds.length > evens.length){
-  return evens[0];
-}else return odds[0];
+  integers.forEach(function (number) {
+    if (number % 2 === 0) {
+      evens.push(number)
+    } else odds.push(number)
+  })
+  if (odds.length > evens.length) {
+    return evens[0];
+  } else return odds[0];
 
 }
 
-console.log(findOutlier([2,6,8,10,3]));
-console.log(findOutlier([1,3,9,10,7]));
-console.log(findOutlier([1,2,9,11,7]));
+console.log(findOutlier([2, 6, 8, 10, 3]));
+console.log(findOutlier([1, 3, 9, 10, 7]));
+console.log(findOutlier([1, 2, 9, 11, 7]));
 
 
-function solution2(str){
+function solution2(str) {
 
   let result = [];
-for(let i = 0; i < str.length; i += 2){
-  if((str[i + 1]) !== undefined) {
-    result.push(str[i] + str[i + 1])
-  }else
-  {result.push(str[i] + "_")}
-}
+  for (let i = 0; i < str.length; i += 2) {
+    if ((str[i + 1]) !== undefined) {
+      result.push(str[i] + str[i + 1])
+    } else {
+      result.push(str[i] + "_")
+    }
+  }
   return result;
 }
 
@@ -225,21 +229,33 @@ function solution(numbers, left, right) {
   let result = [];
 
 
-  for(let i = 0; i < numbers.length; i++){
+  for (let i = 0; i < numbers.length; i++) {
 
     let x = (numbers[i]) / (i + 1);
 
-    if(Number.isInteger(x) && x >= left && x <= right){
+    if (Number.isInteger(x) && x >= left && x <= right) {
       result.push(true)
-    }
-
-    else{
+    } else {
       result.push(false)
     }
 
   }
   return result;
-
-
-
 }
+
+function solution3(number) {
+  if (number < 0) {
+    return 0;
+  }
+  let total = 0
+  for (let i = 0; i < number; i++) {
+
+    if((i % 3 === 0) || (i % 5 === 0)){
+      total += i;
+    }
+
+  }
+return total;
+}
+
+console.log(solution3(10));
