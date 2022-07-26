@@ -259,3 +259,9 @@ return total;
 }
 
 console.log(solution3(10));
+
+function twistedSum(n) {
+
+
+  return 0;
+}
