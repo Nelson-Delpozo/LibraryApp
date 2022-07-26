@@ -266,12 +266,16 @@ function twistedSum(n) {
   let stringOfDoubles = "";
   for(let i = 1; i <= n; i++){
     if(i <= 9){
-      singleDigitsTotal += i;
+      singleDigitsTotal += Number(i);
+      console.log(singleDigitsTotal)
     }else{
       stringOfDoubles = stringOfDoubles + (String(i));
+      console.log(stringOfDoubles)
       let arrayOfDoubles = Array.from(stringOfDoubles);
+      console.log(arrayOfDoubles)
       for(let i = 0; i < arrayOfDoubles.length; i++){
         doubleDigitsTotal += arrayOfDoubles[i];
+        console.log(doubleDigitsTotal)
       }
     }
   }
