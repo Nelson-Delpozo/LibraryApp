@@ -281,10 +281,21 @@ function twistedSum(n) {
   }
   return singleDigitsTotal + doubleDigitsTotal;
 }
-console.log(twistedSum(12));
+// console.log(twistedSum(12));
 
 
 function formatDuration (seconds) {
-  // Complete this function
+
+  let hours = 0;
+  let minutes = 0;
+  let segundos = 0;
+
+
+  console.log(hours, minutes, segundos);
+  console.log(seconds);
+
+
 }
+
+formatDuration(123232324);
 
