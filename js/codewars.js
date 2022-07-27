@@ -282,3 +282,9 @@ function twistedSum(n) {
   return singleDigitsTotal + doubleDigitsTotal;
 }
 console.log(twistedSum(12));
+
+
+function formatDuration (seconds) {
+  // Complete this function
+}
+
