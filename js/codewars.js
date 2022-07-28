@@ -291,6 +291,7 @@ function formatDuration (seconds) {
   let segundos = 0;
 
 
+
   console.log(hours, minutes, segundos);
   console.log(seconds);
 
