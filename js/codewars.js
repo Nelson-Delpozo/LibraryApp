@@ -343,6 +343,10 @@ var hanoi = function(disks) {
 //
 // checkGoldbach(14)/check_goldbach(14) should return [3, 11]
 
+// Checks Goldbach's conjecture for the given argument
+var checkGoldbach = function(number) {
+  // Implement your code here
+};
 
 
 
