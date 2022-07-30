@@ -357,5 +357,8 @@ var checkGoldbach = function(number) {
 //   Task:
 // Place all people in alphabetical order where Mothers are followed by their children, i.e. "aAbaBb" => "AaaBbb".
 
+function findChildren(dancingBrigade) {
+  return '';
+}
 
 
