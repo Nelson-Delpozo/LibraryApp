@@ -371,15 +371,14 @@ function findChildren(dancingBrigade) {
     }
     for(let i = 0; i < dancingArray.length; i ++){
       if(dancingArray[i] === dancingArray[i].toLowerCase()){
-
+        newArray.splice(newArray.indexOf((dancingArray[i].toUpperCase() + 1)), 0, dancingArray[i]);
       }
     }
 
   }
 
 
-
-  // return '';
+  console.log(newArray);
 }
 
 findChildren("AaaBCbbcc");
