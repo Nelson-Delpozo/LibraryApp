@@ -250,12 +250,12 @@ function solution3(number) {
   let total = 0
   for (let i = 0; i < number; i++) {
 
-    if((i % 3 === 0) || (i % 5 === 0)){
+    if ((i % 3 === 0) || (i % 5 === 0)) {
       total += i;
     }
 
   }
-return total;
+  return total;
 }
 
 console.log(solution3(10));
@@ -264,16 +264,16 @@ function twistedSum(n) {
   let singleDigitsTotal = 0;
   let doubleDigitsTotal = 0;
   let stringOfDoubles = "";
-  for(let i = 1; i <= n; i++){
-    if(i <= 9){
+  for (let i = 1; i <= n; i++) {
+    if (i <= 9) {
       singleDigitsTotal += Number(i);
       console.log(singleDigitsTotal)
-    }else{
+    } else {
       stringOfDoubles = stringOfDoubles + (String(i));
       console.log(stringOfDoubles)
       let arrayOfDoubles = Array.from(stringOfDoubles);
       // console.log(arrayOfDoubles)
-      for(let i = 0; i < arrayOfDoubles.length; i++){
+      for (let i = 0; i < arrayOfDoubles.length; i++) {
         doubleDigitsTotal += arrayOfDoubles[i];
         console.log(doubleDigitsTotal)
       }
@@ -281,15 +281,15 @@ function twistedSum(n) {
   }
   return singleDigitsTotal + doubleDigitsTotal;
 }
+
 // console.log(twistedSum(12));
 
 
-function formatDuration (seconds) {
+function formatDuration(seconds) {
 
   let hours = 0;
   let minutes = 0;
   let segundos = 0;
-
 
 
   console.log(hours, minutes, segundos);
@@ -312,7 +312,7 @@ formatDuration(123232324);
 //   Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack i.e. a disk can only be moved if it is the uppermost disk on a stack.
 //   No disk may be placed on top of a smaller disk.
 
-var hanoi = function(disks) {
+var hanoi = function (disks) {
   // your code here
 };
 
@@ -344,7 +344,7 @@ var hanoi = function(disks) {
 // checkGoldbach(14)/check_goldbach(14) should return [3, 11]
 
 // Checks Goldbach's conjecture for the given argument
-var checkGoldbach = function(number) {
+var checkGoldbach = function (number) {
   // Implement your code here
 };
 
@@ -365,24 +365,24 @@ function findChildren(dancingBrigade) {
   console.log(dancingArray);
   let newArray = [];
 
-  for(let i = 0; i < dancingArray.length; i++) {
+  for (let i = 0; i < dancingArray.length; i++) {
     if (dancingArray[i] === dancingArray[i].toUpperCase()) {
       newArray.push(dancingArray[i]);
     }
   }
-    for(let i = 0; i < dancingArray.length; i++){
-      if(dancingArray[i] === dancingArray[i].toLowerCase()) {
-        // console.log(dancingArray[i]);
-        newArray.splice(newArray.indexOf((dancingArray[i]).toUpperCase()), 0, dancingArray[i]);
-      }
-      }
+  for (let i = 0; i < dancingArray.length; i++) {
+    if (dancingArray[i] === dancingArray[i].toLowerCase()) {
+      // console.log(dancingArray[i]);
+      newArray.splice(newArray.indexOf((dancingArray[i]).toUpperCase()), 0, dancingArray[i]);
 
-
-
-  console.log(newArray);
+    }
   }
 
+  newArray.reverse();
+  newArray = newArray.join("");
 
+  console.log(newArray);
+}
 
 
 findChildren("AaaBCbbcc");
