@@ -345,6 +345,7 @@ var hanoi = function (disks) {
 
 // Checks Goldbach's conjecture for the given argument
 var checkGoldbach = function (number) {
+
   // Implement your code here
 };
 
@@ -374,15 +375,13 @@ function findChildren(dancingBrigade) {
     if (dancingArray[i] === dancingArray[i].toLowerCase()) {
       // console.log(dancingArray[i]);
       newArray.splice(newArray.indexOf((dancingArray[i]).toUpperCase()) + 1, 0, dancingArray[i]);
-
     }
   }
-
   // newArray.reverse();
   newArray = newArray.join("");
-
   console.log(newArray);
 }
 
-
 findChildren("AaaBCbbcc");
+
+
