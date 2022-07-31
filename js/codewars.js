@@ -373,12 +373,12 @@ function findChildren(dancingBrigade) {
   for (let i = 0; i < dancingArray.length; i++) {
     if (dancingArray[i] === dancingArray[i].toLowerCase()) {
       // console.log(dancingArray[i]);
-      newArray.splice(newArray.indexOf((dancingArray[i]).toUpperCase()), 0, dancingArray[i]);
+      newArray.splice(newArray.indexOf((dancingArray[i]).toUpperCase()) + 1, 0, dancingArray[i]);
 
     }
   }
 
-  newArray.reverse();
+  // newArray.reverse();
   newArray = newArray.join("");
 
   console.log(newArray);
