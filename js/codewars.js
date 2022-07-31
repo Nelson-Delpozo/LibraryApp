@@ -365,20 +365,24 @@ function findChildren(dancingBrigade) {
   console.log(dancingArray);
   let newArray = [];
 
-  for(let i = 0; i < dancingArray.length; i++){
-    if(dancingArray[i] === dancingArray[i].toUpperCase()){
+  for(let i = 0; i < dancingArray.length; i++) {
+    if (dancingArray[i] === dancingArray[i].toUpperCase()) {
       newArray.push(dancingArray[i]);
     }
-    for(let i = 0; i < dancingArray.length; i ++){
-      if(dancingArray[i] === dancingArray[i].toLowerCase()){
-        newArray.splice(newArray.indexOf((dancingArray[i].toUpperCase() + 1)), 0, dancingArray[i]);
-      }
-    }
-
   }
+    for(let i = 0; i < dancingArray.length; i++){
+      if(dancingArray[i] === dancingArray[i].toLowerCase()) {
+        // console.log(dancingArray[i]);
+        newArray.splice(newArray.indexOf((dancingArray[i]).toUpperCase()), 0, dancingArray[i]);
+      }
+      }
+
 
 
   console.log(newArray);
-}
+  }
+
+
+
 
 findChildren("AaaBCbbcc");
