@@ -358,7 +358,28 @@ var checkGoldbach = function(number) {
 // Place all people in alphabetical order where Mothers are followed by their children, i.e. "aAbaBb" => "AaaBbb".
 
 function findChildren(dancingBrigade) {
-  return '';
+
+  let dancingArray = dancingBrigade.split("");
+  console.log(dancingArray);
+  dancingArray = dancingArray.sort();
+  console.log(dancingArray);
+  let newArray = [];
+
+  for(let i = 0; i < dancingArray.length; i++){
+    if(dancingArray[i] === dancingArray[i].toUpperCase()){
+      newArray.push(dancingArray[i]);
+    }
+    for(let i = 0; i < dancingArray.length; i ++){
+      if(dancingArray[i] === dancingArray[i].toLowerCase()){
+
+      }
+    }
+
+  }
+
+
+
+  // return '';
 }
 
-
+findChildren("AaaBCbbcc");
